@@ -1,0 +1,5 @@
+<!-- qfilm table-info row: muted label column, value, zinc rule between rows. -->
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingTop="4dp" android:paddingBottom="4dp">
+    <TextView android:id="@+id/info_label" android:layout_width="120dp" android:layout_height="wrap_content" android:textColor="@color/tv_muted" android:textSize="16sp" />
+    <TextView android:id="@+id/info_value" android:layout_width="0dp" android:layout_height="wrap_content" android:textColor="@color/tv_text" android:textSize="16sp" android:maxLines="1" android:ellipsize="end" />
+</TableRow>

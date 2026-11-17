@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="56dp" android:orientation="horizontal" android:gravity="center_vertical"
+    android:paddingStart="10dp" android:paddingEnd="16dp" android:focusable="true" android:clickable="true" android:background="@drawable/suggestion_bg">
+    <ImageView android:id="@+id/suggestion_poster" android:layout_width="32dp" android:layout_height="44dp" android:scaleType="centerCrop"
+        android:background="@drawable/poster_placeholder" android:importantForAccessibility="no" />
+    <TextView android:id="@+id/suggestion_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="14dp"
+        android:textColor="@color/tv_text" android:textSize="18sp" android:maxLines="1" android:ellipsize="end" />
+    <TextView android:id="@+id/suggestion_original" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_marginStart="12dp"
+        android:textColor="@color/tv_muted" android:textSize="15sp" android:maxLines="1" android:ellipsize="end" />
+</LinearLayout>

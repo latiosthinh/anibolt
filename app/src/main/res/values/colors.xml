@@ -1,0 +1,12 @@
+<resources>
+    <!-- AniBolt palette (qfilm-client): near-black page, zinc panels, orange accent. -->
+    <color name="tv_background">#090909</color>
+    <color name="tv_surface">#18181B</color>
+    <color name="tv_surface_high">#27272A</color>
+    <color name="tv_border">#1AFFFFFF</color>
+    <color name="tv_divider">#18181B</color>
+    <color name="tv_text">#FAFAFA</color>
+    <color name="tv_muted">#B3FAFAFA</color>
+    <color name="tv_accent">#F15A24</color>
+    <color name="tv_accent_amber">#FFAA00</color>
+</resources>

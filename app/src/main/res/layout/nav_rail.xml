@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- qfilm sticky sidebar, shared by home and the listing screens. Collapsed to icons (80dp) until it has focus; see NavRail. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/nav_rail" android:layout_width="80dp" android:layout_height="match_parent" android:orientation="vertical" android:background="@color/tv_surface">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical"
+        android:paddingStart="24dp" android:paddingTop="32dp" android:paddingBottom="40dp">
+        <ImageView android:layout_width="32dp" android:layout_height="32dp" android:src="@drawable/ic_logo" android:contentDescription="@string/app_name" />
+        <TextView android:id="@+id/rail_brand" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="12dp"
+            android:textColor="@color/tv_text" android:textSize="22sp" android:maxLines="1" android:visibility="gone" android:importantForAccessibility="no" />
+    </LinearLayout>
+    <include android:id="@+id/nav_home" layout="@layout/rail_item" />
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#0DFFFFFF" />
+    <include android:id="@+id/nav_updated" layout="@layout/rail_item" />
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#0DFFFFFF" />
+    <include android:id="@+id/nav_search" layout="@layout/rail_item" />
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#0DFFFFFF" />
+    <include android:id="@+id/nav_genres" layout="@layout/rail_item" />
+</LinearLayout>

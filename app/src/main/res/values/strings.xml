@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AniBolt</string>
+
+    <!-- Navigation rail (qfilm sidebar) -->
+    <string name="nav_home">Khám phá</string>
+    <string name="nav_search">Tìm kiếm</string>
+    <string name="nav_genres">Thể loại</string>
+    <string name="row_see_all">Xem tất cả ›\nToàn bộ phim mới cập nhật</string>
+    <string name="nav_updated">Mới cập nhật</string>
+    <string name="updated_title">Mới cập nhật</string>
+    <string name="listing_count">Trang %1$d / %2$d  ·  ◀ ▶ ở mép hoặc CH+ / CH− để lật trang</string>
+    <string name="listing_empty_page">Trang %1$d không có phim nào.</string>
+    <string name="home_hint">Mũi tên để duyệt   ·   OK để chọn   ·   Trái để mở menu</string>
+
+    <!-- Home rows -->
+    <string name="row_continue">Tiếp tục xem</string>
+    <string name="row_updated">Phim mới cập nhật</string>
+    <string name="row_discover">Đề cử</string>
+    <string name="row_genres">Thể loại</string>
+    <string name="home_loading">Đang tải phim mới cập nhật…</string>
+    <string name="row_loading">Đang tải phim mới…</string>
+    <string name="row_failed">Không tải được. Nhấn OK để thử lại.</string>
+    <string name="episode_badge">Tập %d</string>
+    <string name="continue_description">Xem tiếp %1$s, tập %2$d</string>
+    <string name="browse_genre">Duyệt thể loại %s</string>
+
+    <!-- Search and genres -->
+    <string name="details_loading">Đang tải thông tin phim…</string>
+    <string name="search_title">Tìm kiếm</string>
+    <string name="search_hint">Nhập tên phim</string>
+    <string name="search_action">Tìm</string>
+    <string name="search_refresh">Tải lại</string>
+    <string name="search_retry">Thử lại</string>
+    <string name="search_prompt">Gõ tên phim để xem gợi ý, hoặc chọn Tìm để xem tất cả kết quả.</string>
+    <string name="suggestion_description">Gợi ý: %s</string>
+    <string name="suggestion_description_original">Gợi ý: %1$s, %2$s</string>
+    <string name="search_empty_query">Hãy nhập tên phim để tìm.</string>
+    <string name="search_loading">Đang tải phim…</string>
+    <string name="search_empty">Không tìm thấy phim nào. Hãy thử tên khác hoặc quay lại sau.</string>
+    <string name="search_count">%d phim · Chọn phim để xem danh sách tập</string>
+    <string name="search_failed">Không tải được phim. Kiểm tra kết nối rồi chọn Thử lại.</string>
+    <string name="genre_fallback_title">Thể loại</string>
+    <string name="genres_title">Thể loại</string>
+    <string name="browse_hint">Mũi tên để duyệt   ·   OK để chọn   ·   Quay lại để trở về</string>
+
+    <!-- Details (qfilm movie page) -->
+    <string name="details_fallback_title">Chi tiết phim</string>
+    <string name="section_overview">TỔNG QUAN</string>
+    <string name="section_watch">XEM PHIM</string>
+    <string name="info_genres">Thể loại</string>
+    <string name="rating_value">★ %s</string>
+    <string name="episodes_count">%d tập</string>
+    <string name="episodes_loading">Đang tải danh sách tập…</string>
+    <string name="episodes_failed">Không tải được danh sách tập. Kiểm tra kết nối rồi thử lại.</string>
+    <string name="episodes_none">Chưa có tập nào xem được. Hãy thử lại sau.</string>
+    <string name="action_loading">Đang tải…</string>
+    <string name="action_unavailable">Không có tập</string>
+    <string name="action_latest">Tập mới nhất · %d</string>
+    <string name="action_resume">Xem tiếp · Tập %d</string>
+    <string name="action_retry">Thử lại</string>
+    <string name="order_newest">Mới nhất trước</string>
+    <string name="order_oldest">Cũ nhất trước</string>
+    <string name="episode_page">%1$d–%2$d</string>
+    <string name="episode_page_description">Tập %1$d đến %2$d</string>
+    <string name="episode_play">Phát tập %d</string>
+    <string name="episode_play_last">Phát tập %d, đang xem dở</string>
+    <string name="episode_last_marker">Đang xem</string>
+    <string name="details_hint">Mũi tên để duyệt   ·   OK để phát   ·   Quay lại để trở về</string>
+
+    <!-- Player -->
+    <string name="player_exit">Thoát</string>
+    <string name="player_restart">Xem lại từ đầu</string>
+    <string name="player_rewind">Tua lại 10 giây</string>
+    <string name="player_toggle">Phát / Dừng</string>
+    <string name="player_pause">Tạm dừng</string>
+    <string name="player_play">Phát</string>
+    <string name="player_next_generic">Tập tiếp</string>
+    <string name="player_seek">Thanh thời gian</string>
+    <string name="player_seek_hint">◀ ▶ để tua (giữ để tua nhanh) · OK để xem từ đây</string>
+    <string name="player_forward">Tua tới 10 giây</string>
+    <string name="player_next">Tập tiếp · %d</string>
+    <string name="player_reload">Tải lại</string>
+    <string name="player_hide">Ẩn điều khiển</string>
+    <string name="player_heading">%1$s · Tập %2$d</string>
+    <string name="player_episode">Tập %d</string>
+    <string name="player_loading">Đang tải tập phim…</string>
+    <string name="player_ready">Xuống để ẩn thanh điều khiển · Lên/Xuống để hiện lại · Trái/Phải để tua</string>
+    <string name="player_press_play">Video chưa tự phát. Chọn Phát / Dừng để bắt đầu.</string>
+    <string name="player_error">Không tải được tập này. Chọn Tải lại hoặc Thoát.</string>
+    <string name="player_not_ready">Trình phát chưa sẵn sàng. Thử lại hoặc chọn Tải lại.</string>
+    <string name="player_state_playing">Đang phát</string>
+    <string name="player_state_restarted">Đã quay về đầu tập</string>
+    <string name="player_state_paused">Đã tạm dừng</string>
+    <string name="player_state_starting">Đang bắt đầu phát…</string>
+    <string name="player_state_failed">Không phát được. Hãy chọn Tải lại.</string>
+    <string name="player_state_buffering">Video đang tải. Thử lại sau giây lát.</string>
+    <string name="player_state_position">Vị trí %1$d:%2$02d</string>
+</resources>

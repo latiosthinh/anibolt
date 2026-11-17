@@ -1,0 +1,17 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- qfilm sidebar: active item is black with a 3dp orange right border; focus is a lighter zinc.
+         The border is an orange layer under an inset fill, which works on API 21+. -->
+    <item android:state_focused="true">
+        <layer-list>
+            <item><shape><solid android:color="@color/tv_accent" /></shape></item>
+            <item android:right="3dp"><shape><solid android:color="@color/tv_surface_high" /></shape></item>
+        </layer-list>
+    </item>
+    <item android:state_selected="true">
+        <layer-list>
+            <item><shape><solid android:color="@color/tv_accent" /></shape></item>
+            <item android:right="3dp"><shape><solid android:color="#000000" /></shape></item>
+        </layer-list>
+    </item>
+    <item><shape><solid android:color="#00000000" /></shape></item>
+</selector>

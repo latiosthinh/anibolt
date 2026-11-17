@@ -1,0 +1,20 @@
+.gradle/
+.gradle-local/
+**/build/
+local.properties
+*.iml
+.idea/
+.DS_Store
+captures/
+*.apk
+*.aab
+*.jks
+*.keystore
+
+# Local debugging leftovers (uiautomator dumps, screen grabs, local proxy)
+/u*.txt
+/ui*.txt
+/shot.raw
+/screenshot.png
+/screenshot_base64.txt
+/proxy.ps1

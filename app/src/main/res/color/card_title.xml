@@ -1,0 +1,5 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- qfilm: card title turns orange on hover; on TV, on focus. -->
+    <item android:state_focused="true" android:color="@color/tv_accent" />
+    <item android:color="@color/tv_text" />
+</selector>

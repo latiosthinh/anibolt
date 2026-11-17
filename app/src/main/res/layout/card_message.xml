@@ -1,0 +1,5 @@
+<!-- Stand-in for the hero row while it loads or after a failure (OK retries). -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="384dp" android:layout_height="216dp" android:focusable="true" android:background="@drawable/tile_bg" android:padding="24dp">
+    <TextView android:id="@+id/message_text" android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:textColor="@color/tv_text" android:textSize="18sp" />
+</FrameLayout>

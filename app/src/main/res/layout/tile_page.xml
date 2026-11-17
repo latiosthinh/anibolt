@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- One episode range ("1–10") in the strip above the episode grid. -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/episode_page_tab"
+    android:layout_width="wrap_content" android:layout_height="40dp" android:layout_marginEnd="10dp" android:minWidth="92dp"
+    android:paddingStart="16dp" android:paddingEnd="16dp" android:gravity="center" android:focusable="true" android:clickable="true"
+    android:background="@drawable/page_tab_bg" android:textColor="@color/page_tab_text" android:textSize="16sp" android:textStyle="bold" android:maxLines="1" />

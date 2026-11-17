@@ -1,0 +1,5 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- qfilm dims the artwork on hover so the play mark reads; lighter here for a TV. -->
+    <item android:state_focused="true"><color android:color="#59000000" /></item>
+    <item><color android:color="#00000000" /></item>
+</selector>

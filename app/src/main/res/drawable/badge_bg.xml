@@ -1,0 +1,5 @@
+<!-- qfilm episode badge: orange, flush top-left, rounded bottom-right. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/tv_accent" />
+    <corners android:bottomRightRadius="8dp" android:topLeftRadius="8dp" android:topRightRadius="0dp" android:bottomLeftRadius="0dp" />
+</shape>

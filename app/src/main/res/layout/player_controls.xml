@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Player control bar: title, seek slider with times, then round icon buttons (exit | start over, rewind, play, forward, next | reload, hide).
+     The focused button's name is shown underneath, since the buttons carry icons only. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/player_controls"
+    android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_gravity="bottom" android:orientation="vertical"
+    android:background="@drawable/player_scrim" android:paddingStart="48dp" android:paddingEnd="48dp" android:paddingTop="72dp" android:paddingBottom="18dp">
+
+    <TextView android:id="@+id/player_heading" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:textColor="@color/tv_text" android:textSize="24sp" android:textStyle="bold" android:maxLines="1" android:ellipsize="end" />
+    <TextView android:id="@+id/player_status" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp"
+        android:text="@string/player_loading" android:textColor="@color/tv_muted" android:textSize="15sp" android:maxLines="1" android:ellipsize="end"
+        android:accessibilityLiveRegion="polite" />
+
+    <LinearLayout android:id="@+id/player_timeline" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp"
+        android:orientation="horizontal" android:gravity="center_vertical" android:visibility="invisible">
+        <TextView android:id="@+id/player_time_current" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="64dp"
+            android:textColor="@color/tv_text" android:textSize="15sp" />
+        <!-- Seek slider: Up from the buttons focuses it; Left/Right move the target time (holding speeds up), OK or a short pause jumps there. -->
+        <SeekBar android:id="@+id/player_progress" android:layout_width="0dp" android:layout_weight="1" android:layout_height="28dp"
+            android:layout_marginStart="2dp" android:layout_marginEnd="2dp" android:paddingStart="10dp" android:paddingEnd="10dp"
+            android:max="1000" android:minHeight="4dp" android:maxHeight="4dp" android:progressDrawable="@drawable/player_progress"
+            android:thumb="@drawable/player_seek_thumb" android:splitTrack="false" android:background="@null" android:focusable="true"
+            android:nextFocusDown="@+id/player_play" android:contentDescription="@string/player_seek" />
+        <TextView android:id="@+id/player_time_total" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="64dp"
+            android:gravity="end" android:textColor="@color/tv_muted" android:textSize="15sp" />
+    </LinearLayout>
+
+    <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp">
+        <ImageButton android:id="@+id/player_exit" style="@style/PlayerButton" android:layout_gravity="start|center_vertical"
+            android:src="@drawable/ic_player_exit" android:contentDescription="@string/player_exit" />
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:orientation="horizontal" android:gravity="center_vertical">
+            <ImageButton android:id="@+id/player_restart" style="@style/PlayerButton" android:layout_marginEnd="16dp" android:src="@drawable/ic_player_restart" android:contentDescription="@string/player_restart" />
+            <ImageButton android:id="@+id/player_rewind" style="@style/PlayerButton" android:src="@drawable/ic_player_rewind" android:contentDescription="@string/player_rewind" />
+            <ImageButton android:id="@+id/player_play" style="@style/PlayerButton" android:layout_width="58dp" android:layout_height="58dp" android:padding="15dp"
+                android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:src="@drawable/ic_player_pause" android:contentDescription="@string/player_toggle" />
+            <ImageButton android:id="@+id/player_forward" style="@style/PlayerButton" android:src="@drawable/ic_player_forward" android:contentDescription="@string/player_forward" />
+            <ImageButton android:id="@+id/player_next" style="@style/PlayerButton" android:layout_marginStart="16dp" android:src="@drawable/ic_player_next" android:contentDescription="@string/player_next_generic" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="end|center_vertical" android:orientation="horizontal">
+            <ImageButton android:id="@+id/player_reload" style="@style/PlayerButton" android:src="@drawable/ic_player_reload" android:contentDescription="@string/player_reload" />
+            <ImageButton android:id="@+id/player_hide" style="@style/PlayerButton" android:layout_marginStart="12dp" android:src="@drawable/ic_player_hide" android:contentDescription="@string/player_hide" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <TextView android:id="@+id/player_button_label" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp"
+        android:gravity="center" android:textColor="@color/tv_text" android:textSize="15sp" android:maxLines="1" android:importantForAccessibility="no" />
+</LinearLayout>

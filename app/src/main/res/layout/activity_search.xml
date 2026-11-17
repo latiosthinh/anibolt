@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Search, genre and "Mới cập nhật" listings with the home screen's menu on the left. One header row; the grid below
+  holds a whole screen of SearchActivity.COLUMNS × ROWS cards with no scrolling, its outer cards flush with the title
+  and the button above.
+-->
+<!-- A FrameLayout, not <merge>: the menu must be drawn over the content, and the root keeps one clear parent for both. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent" tools:ignore="MergeRootFrame">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical"
+        android:layout_marginStart="80dp" android:paddingStart="40dp" android:paddingEnd="48dp" android:paddingTop="24dp" android:paddingBottom="16dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="56dp" android:orientation="horizontal" android:gravity="center_vertical">
+            <TextView android:id="@+id/search_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="24dp"
+                android:text="@string/search_title" android:textSize="28sp" android:textColor="@color/tv_text" android:textStyle="bold" android:maxLines="1" />
+            <EditText android:id="@+id/search_input" android:layout_width="0dp" android:layout_weight="1" android:layout_height="56dp" android:hint="@string/search_hint"
+                android:singleLine="true" android:imeOptions="actionSearch" android:inputType="text" android:importantForAutofill="no" android:textSize="20sp"
+                android:paddingStart="16dp" android:paddingEnd="16dp" android:textColor="@color/tv_text" android:textColorHint="@color/tv_muted"
+                android:background="@drawable/search_field_bg" android:drawableStart="@drawable/ic_nav_search" android:drawablePadding="12dp"
+                android:nextFocusRight="@id/search_submit" android:nextFocusDown="@id/search_grid" />
+            <!-- Listings: "Trang 3 / 50 · …" in the field's place, right-aligned next to Reload. -->
+            <TextView android:id="@+id/search_page_info" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                android:gravity="end" android:textColor="@color/tv_muted" android:textSize="17sp" android:maxLines="2" android:ellipsize="end"
+                android:accessibilityLiveRegion="polite" android:visibility="gone" />
+            <Button android:id="@+id/search_submit" style="@style/TvButton" android:layout_width="wrap_content" android:layout_height="56dp" android:layout_marginStart="16dp"
+                android:minWidth="120dp" android:text="@string/search_action" android:nextFocusLeft="@id/search_input" android:nextFocusDown="@id/search_grid" />
+        </LinearLayout>
+        <!-- Search only: prompts, counts and errors under the field. -->
+        <TextView android:id="@+id/search_status" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+            android:text="@string/search_prompt" android:textColor="@color/tv_muted" android:textSize="17sp" android:maxLines="1" android:ellipsize="end"
+            android:accessibilityLiveRegion="polite" />
+        <!-- Live title suggestions while typing; aligned under the field in code, hidden until the provider answers. -->
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/search_suggestions" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="6dp" android:layout_marginEnd="136dp" android:padding="6dp" android:clipToPadding="false" android:background="@drawable/suggestion_panel"
+            android:overScrollMode="never" android:visibility="gone" />
+        <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:layout_marginTop="12dp">
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/search_grid" android:layout_width="match_parent" android:layout_height="match_parent"
+                android:clipToPadding="false" android:clipChildren="false" android:overScrollMode="never" android:nextFocusUp="@id/search_input" />
+            <!-- AniBolt loader over the results area while a page loads. -->
+            <com.animetv.ui.LoadingView android:id="@+id/search_loading" android:layout_width="match_parent" android:layout_height="match_parent" android:visibility="gone" />
+        </FrameLayout>
+    </LinearLayout>
+    <!-- Drawn over the content: widening it while it has focus does not resize the grid. -->
+    <include layout="@layout/nav_rail" />
+</FrameLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- qfilm card-md: poster with corner episode badge, meta line, then title. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="168dp" android:layout_height="wrap_content"
+    android:orientation="vertical" android:focusable="true" android:paddingBottom="4dp">
+    <com.animetv.ui.RatioFrameLayout android:id="@+id/card_frame" android:layout_width="match_parent" android:layout_height="wrap_content"
+        app:heightRatio="1.2" android:background="@drawable/poster_frame" android:foreground="@drawable/focus_ring" android:duplicateParentState="true">
+        <ImageView android:id="@+id/card_poster" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" android:importantForAccessibility="no" />
+        <View android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/focus_dim" android:duplicateParentState="true" />
+        <ImageView android:layout_width="56dp" android:layout_height="56dp" android:layout_gravity="center" android:src="@drawable/play_on_focus" android:duplicateParentState="true" android:importantForAccessibility="no" />
+        <TextView android:id="@+id/card_badge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="top|start"
+            android:background="@drawable/badge_bg" android:paddingStart="10dp" android:paddingEnd="10dp" android:paddingTop="3dp" android:paddingBottom="3dp"
+            android:textColor="@color/tv_text" android:textSize="13sp" android:maxLines="1" android:ellipsize="end" android:maxWidth="150dp" />
+    </com.animetv.ui.RatioFrameLayout>
+    <TextView android:id="@+id/card_meta" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp"
+        android:textColor="@color/tv_muted" android:textSize="14sp" android:maxLines="1" android:ellipsize="end" />
+    <TextView android:id="@+id/card_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp"
+        android:textColor="@color/card_title" android:textSize="17sp" android:maxLines="1" android:ellipsize="end" android:duplicateParentState="true" />
+</LinearLayout>

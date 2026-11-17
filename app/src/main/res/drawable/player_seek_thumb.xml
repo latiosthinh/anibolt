@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Seek slider handle. Both states keep a 20dp box so the handle never shifts when focus changes:
+     a small white dot at rest, a large orange knob with a white ring while the slider has remote focus. -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true">
+        <shape android:shape="oval">
+            <size android:width="20dp" android:height="20dp" />
+            <solid android:color="@color/tv_accent" />
+            <stroke android:width="3dp" android:color="@color/tv_text" />
+        </shape>
+    </item>
+    <item>
+        <inset android:inset="5dp">
+            <shape android:shape="oval">
+                <size android:width="10dp" android:height="10dp" />
+                <solid android:color="@color/tv_text" />
+            </shape>
+        </inset>
+    </item>
+</selector>
