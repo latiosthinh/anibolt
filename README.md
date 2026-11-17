@@ -8,6 +8,7 @@
 
 Browse, search and play from the couch with nothing but a TV remote: no mouse, no pop-ups, no web page clutter.
 
+[![Release](https://img.shields.io/github/v/release/latiosthinh/anibolt?label=download&color=F15A24)](https://github.com/latiosthinh/anibolt/releases/latest)
 ![Platform](https://img.shields.io/badge/platform-Android%20TV-3DDC84?logo=android&logoColor=white)
 ![Kotlin](https://img.shields.io/badge/Kotlin-1.9-7F52FF?logo=kotlin&logoColor=white)
 ![Min SDK](https://img.shields.io/badge/minSdk-21-blue)
@@ -52,6 +53,12 @@ Browse, search and play from the couch with nothing but a TV remote: no mouse, n
 | Player | ⏯ ⏪ ⏩ ⏭ media keys | Toggle · rewind · forward · next episode (⏮ starts over) |
 
 ## 🚀 Install
+
+### Download
+
+Grab **`AniBolt-v1.0.0.apk`** from the [latest release](https://github.com/latiosthinh/anibolt/releases/latest) and sideload it: `adb install -r AniBolt-v1.0.0.apk`, or open it from a USB stick with a file manager on the TV.
+
+### Build and install yourself
 
 You need [adb](https://developer.android.com/tools/adb) and a TV with **Developer options → USB/Network debugging** turned on.
 
